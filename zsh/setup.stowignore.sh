@@ -1,15 +1,19 @@
 #!/bin/bash
 
+# Memorize the current dir
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+# Change the context to $HOME
+cd $HOME
+
 # Download packages
-sudo pacman -S exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep 
+sudo pacman -S exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep
 
 # Download and install oh-my-zsh
-sh -c "$(curl -fsSL 
-https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g' | sed 's:chsh -s .*$::g')"
 
 # Download the powerline9k theme
-git clone https://github.com/bhilburn/powerlevel9k.git 
-~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # Download and install fzf
 git clone https://github.com/junegunn/fzf.git ${ZSH}/custom/plugins/fzf
@@ -18,3 +22,9 @@ ${ZSH}/custom/plugins/fzf/install --bin
 # Download fzf-zsh
 git clone https://github.com/Treri/fzf-zsh.git ${ZSH}/custom/plugins/fzf-zsh
 
+# Cleanup and stow
+rm $HOME/.zshrc
+cd $DIR/..
+stow zsh
+
+printf "Success!"
