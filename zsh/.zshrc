@@ -71,7 +71,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  fzf
+  fzf-zsh
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -95,9 +95,6 @@ export ARCHFLAGS="-arch x86_64"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 # Set personal aliases
 alias ls="exa"
