@@ -72,6 +72,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 plugins=(
   git
   fzf-zsh
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

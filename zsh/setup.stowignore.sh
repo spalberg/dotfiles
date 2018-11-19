@@ -23,6 +23,10 @@ ${ZSH}/custom/plugins/fzf/install --bin
 # Download fzf-zsh
 git clone https://github.com/Treri/fzf-zsh.git ${ZSH}/custom/plugins/fzf-zsh
 
+# Download zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git 
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # Cleanup and stow
 rm $HOME/.zshrc
 cd $DIR/..
