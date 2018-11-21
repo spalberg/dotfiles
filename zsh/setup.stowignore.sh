@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd $HOME
 
 # Download packages
-sudo pacman -S --needed yay exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep
+sudo pacman -S --needed yay exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep autojump
 yay -S --needed nvm
 
 # Download and install oh-my-zsh
