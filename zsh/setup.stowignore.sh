@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd $HOME
 
 # Download packages
-sudo pacman -S --needed yay exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep autojump
+sudo pacman -S --needed yay exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep autojump python-pip
 yay -S --needed nvm
 
 # Download and install oh-my-zsh
@@ -24,8 +24,10 @@ ${ZSH}/custom/plugins/fzf/install --bin
 git clone https://github.com/Treri/fzf-zsh.git ${ZSH}/custom/plugins/fzf-zsh
 
 # Download zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git 
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install thefuck
+pip install --user thefuck
 
 # Cleanup and stow
 rm $HOME/.zshrc
