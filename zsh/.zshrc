@@ -117,6 +117,7 @@ alias fd="fd -HI"
 alias dc="docker-compose"
 alias less="bat"
 alias cat="bat"
+alias c="clear"
 
 # Keymaps
 bindkey '\e[1~'   beginning-of-line      # Home
