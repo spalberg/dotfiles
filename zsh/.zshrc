@@ -115,7 +115,8 @@ alias resource="source ~/.zshrc"
 alias du="du -hHLl"
 alias fd="fd -HI"
 alias dc="docker-compose"
-alias lessn="less -N"
+alias less="bat"
+alias cat="bat"
 
 # Keymaps
 bindkey '\e[1~'   beginning-of-line      # Home
