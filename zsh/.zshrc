@@ -115,7 +115,6 @@ alias resource="source ~/.zshrc"
 alias du="du -hHLl"
 alias fd="fd -HI"
 alias dc="docker-compose"
-alias less="bat"
 alias cat="bat"
 alias c="clear"
 
