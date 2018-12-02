@@ -117,6 +117,8 @@ alias fd="fd -HI"
 alias dc="docker-compose"
 alias cat="bat"
 alias c="clear"
+alias cw="yank -- xsel -b"
+alias cl="yank -l -- xsel -b"
 
 # Keymaps
 bindkey '\e[1~'   beginning-of-line      # Home

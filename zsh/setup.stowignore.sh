@@ -8,7 +8,7 @@ cd $HOME
 
 # Download packages
 sudo pacman -S --needed yay exa dfc fd powerline-fonts awesome-terminal-fonts ripgrep autojump python-pip bat
-yay -S --needed nvm
+yay -S --needed nvm yank
 
 # Download and install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g' | sed 's:chsh -s .*$::g')"
