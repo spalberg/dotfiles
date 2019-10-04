@@ -10,6 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Extend PATH
 PATH=$PATH:$HOME/.local/bin
 eval $(thefuck --alias)
+eval $(thefuck --alias FUCK) # for mondays and days without coffee
 export PATH
 
 # Set name of the theme to load --- if set to "random", it will
@@ -79,6 +80,8 @@ plugins=(
   git
   fzf-zsh
   zsh-syntax-highlighting
+  zsh-autosuggestions
+  bgnotify
   autojump
   extract
   thefuck
