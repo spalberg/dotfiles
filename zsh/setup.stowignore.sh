@@ -11,18 +11,20 @@ cd $HOME
 
 # Check for distro support (Arch and ManjaroLinux)
 DISTRIB_ID=`sudo cat /etc/*release | grep DISTRIB_ID | awk -F"=" '{print $2}' | awk '{$1=$1;print}'`
-if [[ $DISTRIB_ID == "ManjaroLinux" ]]; then
-  printf "Detected Manjaro - installing yay via pacman\n"
+if [[ `yay --help` ]]; then
+  printf "Yay is already installed. Skipping.\n"
+elif [[ $DISTRIB_ID == "ManjaroLinux" ]]; then
+  printf "Detected Manjaro - installing yay via pacman.\n"
   sudo pacman -S --needed yay
 elif [[ $DISTRIB_ID == "Arch" ]]; then
-  printf "Detected Manjaro - installing yay manually\n"
+  printf "Detected Manjaro - installing yay manually.\n"
   git clone https://aur.archlinux.org/yay.git /tmp/yay
   cd /tmp/yay
   makepkg -si
   cd $HOME
   rm -rf /tmp/yay
 else
-  printf "Distribution $DISTRIB_ID is not supported at this time. Exiting...\n"
+  printf "Distribution $DISTRIB_ID is not supported at this time. Exiting.\n"
   exit 0
 fi
 
@@ -32,7 +34,10 @@ yay -S --needed nvm yank navi
 
 # Download and install oh-my-zsh if needed
 if ! [[ -d ${ZSH:-~/.oh-my-zsh} ]]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g' | sed 's:chsh -s .*$::g')"
+  printf "Installing Oh-My-ZSH.\n"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+else
+  printf "Oh-My-ZSH is already installed. Skipping.\n"
 fi
 
 ZSH_CUSTOM_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
