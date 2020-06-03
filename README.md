@@ -13,10 +13,6 @@
  ░▓ author ▓ spalberg
  ░▓▓▓▓▓▓▓▓▓▓
  ░░░░░░░░░░
-
- zsh            > zshrc with oh-my-zsh, theme, plugins and more
- git		> basic gitconfig
- terminator	> gui config for terminator
 ```
 
 ## How to use
