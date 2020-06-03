@@ -1,0 +1,2 @@
+google-chrome-stable --app='https://outlook.office.com' --profile-directory='Profile 1' & > /dev/null 2>&1
+disown

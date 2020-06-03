@@ -1,0 +1,10 @@
+set clipboard+=unnamed
+set ignorecase smartcase incsearch " ignore case only when searching lowercase, search while typing
+
+nnoremap gcc :action CommentByLineComment<cr>
+vnoremap gcc :action CommentByLineComment<cr>
+
+let mapleader = ' '
+let maplocalleader = ','
+
+nmap <leader>s :w<CR>

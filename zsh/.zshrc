@@ -1,133 +1,91 @@
+# General Config
+setopt autocd
+bindkey -v # make zle use vi mode
+
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
+zstyle :compinstall filename "${HOME}/.zshrc"
+zstyle ':completion:*' menu select
+zstyle ':completion:*' rehash true
+
+source /usr/share/zsh/share/antigen.zsh
+
+# Antigen Config
+antigen use oh-my-zsh
+export SPACESHIP_BATTERY_SHOW=false
+export SPACESHIP_PHP_SHOW=false
+export SPACESHIP_KUBECTL_SHOW=true
+export SPACESHIP_KUBECTL_VERSION_SHOW=false
+export SPACESHIP_EXIT_CODE_SHOW=true
+
+# workaround for https://github.com/zsh-users/antigen/issues/675
+THEME=denysdovhan/spaceship-prompt
+antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
+
+antigen bundle docker
+antigen bundle git
+antigen bundle fzf-zsh
+antigen bundle bgnotify
+antigen bundle autojump
+antigen bundle extract
+antigen bundle thefuck
+antigen bundle command-not-found
+antigen bundle softmoth/zsh-vim-mode
+antigen bundle zsh-users/zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+#antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
+# Exports
 export TERM=xterm-256color
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-
-# Extend PATH
-PATH=$PATH:$HOME/.local/bin
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK) # for mondays and days without coffee
-export PATH
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-POWERLEVEL9K_MODE="awesome-fontconfig"
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs virtualenv)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  fzf-zsh
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-  bgnotify
-  autojump
-  extract
-  thefuck
-)
-
-zstyle ':completion:*' special-dirs true
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# ssh
+export KEYTIMEOUT=1
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export EDITOR="vim"
+export VISUAL="vim"
 
-# Set personal aliases
+# Alias
 alias ls="exa"
 alias cp="rsync --info=progress2"
 alias df="dfc -moTs"
 alias resource="source ~/.zshrc"
 alias du="du -hHLl"
 alias fd="fd -HI"
-alias dc="docker-compose"
 alias cat="bat"
 alias c="clear"
-alias cw="yank -- xsel -b"
-alias cl="yank -l -- xsel -b"
+alias ssh='TERM=xterm-256color ssh'
 
-# Keymaps
-bindkey '\e[1~'   beginning-of-line      # Home
-bindkey '\e[4~'   end-of-line            # End
-bindkey '\e[3~'   delete-char            # Del
-bindkey '\e[2~'   overwrite-mode         # Insert
+# Docker stuff
+alias d='docker'
+alias dc="docker-compose"
+
+# K8s stuff
+alias k='kubectl'
+alias kdcm='kubectl describe configmap'
+alias kdcj='kubectl describe cronjob'
+alias kdd='kubectl describe deploy'
+alias kdj='kubectl describe job'
+alias kdn='kubectl describe node'
+alias kgns='kubectl describe ns'
+alias kdp='kubectl describe pod'
+alias kgrs='kubectl describe rs'
+alias kds='kubectl describe secret'
+alias kdsvc='kubectl describe service'
+alias ke='kubectl exec -it'
+alias krmp='kubectl delete pod'
+alias kgcm='kubectl get configmap'
+alias kgcj='kubectl get cronjob'
+alias kgd='kubectl get deploy'
+alias kgj='kubectl get job'
+alias kgn='kubectl get node'
+alias kgns='kubectl get ns'
+alias kgp='kubectl get pod'
+alias kgrs='kubectl get rs'
+alias kgs='kubectl get secret'
+alias kgsvc='kubectl get service'
+alias kl='kubectl logs'
 
 # NVM
 source /usr/share/nvm/init-nvm.sh

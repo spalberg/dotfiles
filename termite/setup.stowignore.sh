@@ -13,29 +13,11 @@ cd $HOME
 prepare_yay
 
 # Download packages
-yay -S --needed \
-  exa \
-  dfc \
-  fd \
-  powerline-fonts \
-  ripgrep \
-  python-pip \
-  bat \
-  nvm \
-  autojump \
-  antigen \
-  noto-fonts-emoji \
-  ttf-google-fonts-git \
-  ttf-font-awesome \
-  ttf-ibm-plex
-
-# Install thefuck
-pip install --user thefuck
+yay -S --needed termite ttf-ibm-plex
 
 # Cleanup and stow
-rm $HOME/.zshrc
+rm -r $HOME/.config/termite
 cd $DIR/..
-stow zsh
+stow termite
 
 printf "\nSuccess!\n"
-

@@ -1,0 +1,2 @@
+google-chrome-stable --app='https://to-do.live.com/' --profile-directory='Default' & > /dev/null 2>&1
+disown

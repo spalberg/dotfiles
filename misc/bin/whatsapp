@@ -1,0 +1,2 @@
+google-chrome-stable --app='https://web.whatsapp.com' --profile-directory='Default' & > /dev/null 2>&1
+disown
