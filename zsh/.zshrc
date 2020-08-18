@@ -89,3 +89,9 @@ alias kl='kubectl logs'
 
 # NVM
 source /usr/share/nvm/init-nvm.sh
+
+# Source all files in the ~/.zsh_source directory
+for file in ~/.zsh_source/**/*; do
+    source "$file"
+done
+
