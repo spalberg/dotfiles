@@ -72,7 +72,7 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+g exec google-chrome-stable --profile-directory=Default
 # Screenshots
 bindsym --release Print exec gnome-screenshot -i
-bindsym --release $mod+Shift+s exec gnome-screenshot -a -c
+bindsym --release $mod+Shift+s exec "maim -s -u | xclip -selection clipboard -t image/png -i"
 
 # change focus
 bindsym $mod+h focus left

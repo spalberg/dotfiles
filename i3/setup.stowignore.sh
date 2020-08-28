@@ -22,6 +22,8 @@ yay -S --needed \
   feh \
   rofi \
   xautolock \
+  xclip \
+  maim \
   pasystray
   
 sudo usermod -aG video $USER # user has to be in video group for light to work
