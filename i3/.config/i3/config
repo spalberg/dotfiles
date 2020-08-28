@@ -71,8 +71,8 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # start chrome
 bindsym $mod+g exec google-chrome-stable --profile-directory=Default
 # Screenshots
-bindsym Print exec gnome-screenshot
-bindsym Ctrl+Print exec gnome-screenshot -i
+bindsym --release Print exec gnome-screenshot -i
+bindsym --release $mod+Shift+s exec gnome-screenshot -a -c
 
 # change focus
 bindsym $mod+h focus left
