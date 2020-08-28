@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft To Do
+TryExec=todo
+Exec=todo
+Terminal=false
+StartupWMClass=ToDo
+Type=Application
+X-GNOME-UsesNotifications=true
+Icon=todo
+

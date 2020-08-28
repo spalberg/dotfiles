@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=WhatsApp
+TryExec=whatsapp
+Exec=whatsapp
+Terminal=false
+StartupWMClass=WhatsApp
+Type=Application
+X-GNOME-UsesNotifications=true
+Icon=whatsapp
+

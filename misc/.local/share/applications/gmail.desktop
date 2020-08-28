@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Gmail
+TryExec=gmail
+Exec=gmail -- %u
+Terminal=false
+StartupWMClass=Gmail
+Type=Application
+X-GNOME-UsesNotifications=true
+Icon=gmail
+
