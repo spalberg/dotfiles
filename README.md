@@ -29,10 +29,10 @@ git clone git@github.com:spalberg/dotfiles.git
 
 If you wish to apply the config files from a specific subfolder,
 just `cd` into the `dotfiles` folder and execute `stow` with the subfolder as argument.
-Example for the `terminator` config:
+Example for the `yay` config:
 ```
 cd $HOME/dotfiles
-stow terminator
+stow yay
 ```
 
 However some configs are more complex like the `zsh` config.
@@ -44,3 +44,4 @@ cd $HOME/dotfiles # You don't have to do this, but why not...
 ```
 
 Cheers!
+
