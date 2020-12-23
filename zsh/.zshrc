@@ -26,7 +26,7 @@ antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
 
 antigen bundle docker
 antigen bundle git
-antigen bundle fzf-zsh
+antigen bundle fzf
 antigen bundle bgnotify
 antigen bundle autojump
 antigen bundle extract
@@ -34,7 +34,11 @@ antigen bundle thefuck
 antigen bundle command-not-found
 antigen bundle softmoth/zsh-vim-mode
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle MichaelAquilina/zsh-you-should-use
 bindkey '^ ' autosuggest-accept
+bindkey '^r' fzf-history-widget
+bindkey '^f' fzf-file-widget
+
 #antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
