@@ -48,6 +48,7 @@ exec --no-startup-id "xset -b"
 exec --no-startup-id "setxkbmap -layout de"
 exec --no-startup-id "setxkbmap -variant 'nodeadkeys'"
 exec --no-startup-id "setxkbmap -option 'caps:escape'"
+exec --no-startup-id "xmodmap ~/.Xmodmap &"
 
 # Win as mod
 set $mod Mod4
