@@ -2,7 +2,6 @@ set fish_greeting
 
 alias cp 'rsync --info=progress2'
 alias vim nvim
-alias cat bat
 
 set -x TERM xterm-256color
 set -x EDITOR vim
@@ -15,6 +14,7 @@ abbr -a tf terraform
 abbr -a k kubectl
 abbr -a h helm
 abbr -a g git
+abbr -a cat 'bat --paging=never'
 abbr -a df 'dfc -moTs'
 abbr -a du 'du -hHLl'
 abbr -a fd 'fd -HI'
