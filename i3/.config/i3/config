@@ -40,8 +40,9 @@ exec_always feh --image-bg '#282a36' --bg-center ~/Pictures/wallpaper.png
 
 # Exec 
 exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-exec --no-startup-id xautolock -time 5 -locker '$Locker' &
+# exec --no-startup-id xautolock -time 5 -locker '$Locker' &
 
 exec --no-startup-id "xset -b"
 
@@ -62,7 +63,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

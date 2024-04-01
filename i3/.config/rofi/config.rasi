@@ -1,7 +1,6 @@
 configuration {
 	modi: "window,run,ssh,drun,combi";
   show-icons: true;
-  theme: "slate";
   combi-modi: "window,drun";
 /*	width: 50;*/
 /*	lines: 15;*/
@@ -146,3 +145,6 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+
+@theme "slate"
+
