@@ -1,0 +1,29 @@
+# Colors (Dracula+)
+
+[colors.primary]
+background = '#212121'
+foreground = '#F8F8F2'
+
+[colors.cursor]
+cursor = '#ECEFF4'
+text = '#0E1415'
+
+[colors.normal]
+black = '#21222C'
+blue = '#82AAFF'
+cyan = '#8BE9FD'
+green = '#50FA7B'
+magenta = '#C792EA'
+red = '#FF5555'
+white = '#F8F9F2'
+yellow = '#FFCB6B'
+
+[colors.bright]
+black = '#545454'
+blue = '#D6ACFF'
+cyan = '#A4FFFF'
+green = '#69FF94'
+magenta = '#FF92DF'
+red = '#FF6E6E'
+white = '#F8F8F2'
+yellow = '#FFCB6B'
