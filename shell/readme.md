@@ -10,10 +10,10 @@ The following binaries should be available:
  * fisher
  * starship
  * fzf
+ * fd
  * zoxide
  * eza
  * ripgrep
  * bat
  * mosh
  * tmux
- * kubectl
