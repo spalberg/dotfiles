@@ -1,0 +1,4 @@
+function lga --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LG_OPTIONS' --description 'alias lga eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LG_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LG_OPTIONS $argv
+        
+end

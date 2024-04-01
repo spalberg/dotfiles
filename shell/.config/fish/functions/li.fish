@@ -1,0 +1,4 @@
+function li --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LI_OPTIONS $EXA_L_OPTIONS' --description 'alias li eza $EXA_STANDARD_OPTIONS $EXA_LI_OPTIONS $EXA_L_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LI_OPTIONS $EXA_L_OPTIONS $argv
+        
+end

@@ -1,0 +1,4 @@
+function ltai --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LAI_OPTIONS $EXA_LT_OPTIONS' --description 'alias ltai eza $EXA_STANDARD_OPTIONS $EXA_LAI_OPTIONS $EXA_LT_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LAI_OPTIONS $EXA_LT_OPTIONS $argv
+        
+end

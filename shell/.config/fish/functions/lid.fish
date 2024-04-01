@@ -1,0 +1,4 @@
+function lid --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LID_OPTIONS $EXA_L_OPTIONS' --description 'alias lid eza $EXA_STANDARD_OPTIONS $EXA_LID_OPTIONS $EXA_L_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LID_OPTIONS $EXA_L_OPTIONS $argv
+        
+end

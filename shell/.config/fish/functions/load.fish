@@ -1,0 +1,4 @@
+function load --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LAD_OPTIONS $EXA_LO_OPTIONS' --description 'alias load eza $EXA_STANDARD_OPTIONS $EXA_LAD_OPTIONS $EXA_LO_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LAD_OPTIONS $EXA_LO_OPTIONS $argv
+        
+end

@@ -1,0 +1,4 @@
+function lea --wraps='eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LE_OPTIONS' --description 'alias lea eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LE_OPTIONS'
+  eza $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS $EXA_LE_OPTIONS $argv
+        
+end
