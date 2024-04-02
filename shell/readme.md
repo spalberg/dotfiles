@@ -17,3 +17,10 @@ The following binaries should be available:
  * bat
  * mosh
  * tmux
+
+## Setup
+
+Inside the project root, run the following command:
+```bash
+stow shell
+```
