@@ -20,6 +20,10 @@ abbr -a du 'du -hHLl'
 abbr -a fd 'fd -HI'
 
 if status is-interactive
+    if test -d "/home/linuxbrew"
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    end
+
     if type -q zoxide
         zoxide init fish | source
     end
