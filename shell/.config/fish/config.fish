@@ -19,9 +19,21 @@ abbr -a df 'dfc -moTs'
 abbr -a du 'du -hHLl'
 abbr -a fd 'fd -HI'
 
+abbr -a asp 'aws profile'
+
 if status is-interactive
     if test -d "/home/linuxbrew"
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    end
+
+    if test -d "$HOME/.deno"
+        set -x DENO_INSTALL "$HOME/.deno"
+        set -x DENO_TLS_CA_STORE "system"
+        fish_add_path "$DENO_INSTALL/bin"
+    end
+
+    if test -d "$HOME/.sdkman/candidates"
+        fish_add_path "$HOME/.sdkman/candidates/java/current/bin"
     end
 
     if type -q zoxide
