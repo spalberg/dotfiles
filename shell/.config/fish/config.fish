@@ -20,6 +20,7 @@ abbr -a du 'du -hHLl'
 abbr -a fd 'fd -HI'
 
 abbr -a asp 'aws profile'
+abbr -a asl 'aws sso login'
 
 if status is-interactive
     if test -d "/home/linuxbrew"
