@@ -1,0 +1,8 @@
+/completions/*
+!/completions/bun.fish
+
+/functions/*
+!/functions/ak.fish
+!/functions/sdk.fish
+
+/fish_variables
