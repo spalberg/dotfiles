@@ -33,6 +33,11 @@ if status is-interactive
         fish_add_path "$DENO_INSTALL/bin"
     end
 
+    if test -d "$HOME/.bun"
+        set -X BUN_INSTALL "$HOME/.bun"
+        fish_add_path "$BUN_INSTALL/bin"
+    end
+
     if test -d "$HOME/.sdkman/candidates"
         fish_add_path "$HOME/.sdkman/candidates/java/current/bin"
     end
