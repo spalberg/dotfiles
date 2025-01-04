@@ -1,6 +1,8 @@
 /completions/*
 !/completions/bun.fish
 
+/conf.d/*
+
 /functions/*
 !/functions/ak.fish
 !/functions/sdk.fish
