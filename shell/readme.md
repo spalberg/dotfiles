@@ -7,7 +7,6 @@ This module holds configuration for a shell setup using `alacritty` as terminal 
 The following binaries should be available:
 
  * fish
- * fisher
  * starship
  * fzf
  * fd
@@ -23,4 +22,9 @@ The following binaries should be available:
 Inside the project root, run the following command:
 ```bash
 stow shell
+```
+
+Login into fish and run the following command to initialize the plugins:
+```bash
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update
 ```
