@@ -7,4 +7,6 @@
 !/functions/ak.fish
 !/functions/sdk.fish
 
+/themes/*
+
 /fish_variables
